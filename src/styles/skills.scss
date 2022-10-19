@@ -1,0 +1,50 @@
+@import './mixins.scss';
+
+
+.icons-skills {
+  font-size: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+
+  i {
+    filter: grayscale(100%);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+    &:hover {
+      filter: grayscale(0) !important;
+      transform: scale(1.2);
+    }
+  }
+
+  .button-clicked {
+    filter: grayscale(0) !important;
+    transform: scale(1.2);
+  }
+}
+
+.description-skills {
+  @include flex(column, center, center);
+  margin: 5rem 0;
+
+  div {
+    @include flex(column, center, initial);
+    color: #fff;
+    max-width: 600px;
+    margin: 0 2rem;
+    padding: 1rem 1rem 2rem 1rem;
+
+    h2 {
+      margin: 1rem 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+
+    }
+  }
+}

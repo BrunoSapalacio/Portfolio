@@ -1,0 +1,157 @@
+@import './styles/mixins.scss';
+
+@media (min-width: 1px) and (max-width: 768px) {
+
+  html {
+    font-size: 15px;
+  }
+
+  section {
+    width: 100% !important;
+    height: 90vh;
+    margin: 0 !important;
+  }
+}
+
+@media (min-width: 769px) {
+  section {
+    height: 80vh;
+  }
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v14/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  background-color: #fff;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  margin: 1rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    .tooltiptext {
+      visibility: visible;
+    }
+  }
+  .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    font-family: 'Oswald';
+    font-size: 15px;
+    padding: 10px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -80px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+  }
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #111111;
+  color: #000;
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  section {
+    width: 90%;
+    //height: 80vh;
+    display: flex;
+    flex-direction: column;
+    margin: 10vh auto 0;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    transition: none;
+    overflow: auto;
+
+    >h5 {
+      margin-top: 1rem;
+      letter-spacing: 0.105em;
+      font-size: 1.5rem;
+      padding-top: 1rem;
+      text-align: center;
+    }
+
+    >h1 {
+      font-size: 3rem;
+      margin: 0 1rem;
+      font-weight: 700;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .expand-section {
+      @include buttonSection(#111111, './icons/expand.svg', 3rem);
+    }
+
+    .close-section {
+      @include buttonSection(#e21e1e, './icons/close.svg', 0);
+    }
+
+    .expand-section:hover,
+    .close-section:hover {
+      filter: opacity(0.9);
+      background-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import './mixins.scss';
+
+@media only screen and (max-width: 1024px) {
+  .content-about{
+    width: 90%!important;
+    
+    .profile {
+      align-items: center;
+      flex-direction: column!important;
+
+      p {
+        margin-top: 2rem;
+        width: 100%!important;
+      }
+    }
+  }
+}
+
+.about {
+  @include flex(column, center);
+  color: #000;
+  transition: none;
+
+  .content-about {
+    @include flex(column, center, center);
+    width: 80%;
+
+    .profile {
+      display: flex;
+      justify-content: space-around;
+      margin: 3rem 0;
+
+      img {
+        height: 20rem;
+        width: 20rem;
+        border-radius: 50%;
+      }
+
+      p {
+        width: 50%;
+      }
+    }
+
+    h1 {
+      margin: 1rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .formation-card {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      align-items: center;
+      background: rgb(241, 241, 241);
+      border: 1px solid #dcc;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 1rem;
+      }
+    }
+
+  }
+}

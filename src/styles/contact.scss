@@ -1,0 +1,98 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+@media only screen and (max-width: 768px) {
+  .form-contact {
+    width: 90%!important;
+  }
+
+  .additional-contact {
+    flex-direction: column!important;
+  }
+}
+
+.contact {
+  display: flex;
+
+  p {
+    text-align: center;
+  }
+
+  .form-contact {
+    @include flex(column);
+    width: 60%;
+
+    .input-contact {
+      padding: 1rem 1rem 0.2rem 1rem;
+      margin: 0.5rem 0;
+      border: none;
+      font-size: 1rem;
+      border-bottom: 1px solid #111;
+      transition: all 0.2s ease-in-out;
+
+      &:focus {
+        border-bottom: 1px solid $color-contact;
+        outline: none;
+      }
+    }
+
+    textarea {
+      font-size: 1.2rem;
+      resize: none;
+    }
+
+    .btn-contact {
+      @include button($color-contact, 40%);
+      background-color: #fff;
+      margin: 2rem auto;
+
+      &:hover {
+        background-color: $color-contact;
+        color: #fff;
+      }
+
+      &:disabled {
+        background-color: #ddd;
+        opacity: 0.5;
+        color: #fff;
+        cursor: not-allowed;
+        border: 2px solid rgb(155, 155, 155);
+      }
+    }
+  }
+
+  .additional-contact {
+    margin: 5rem 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+
+    div {
+      @include flex(column, center);
+      gap: 1rem;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1rem);
+
+        img {
+          filter: grayscale(0);
+        }
+
+      }
+
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+        filter: grayscale(100);
+        transition: all 0.2s ease-in-out;
+      }
+
+      h4 {
+        text-align: center;
+      }
+    }
+  }
+}

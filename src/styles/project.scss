@@ -1,0 +1,142 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+@media only screen and (max-width: 768px) {
+  .img-project{
+    width: 90%!important;
+    height: 23rem!important;
+    position: absolute;
+    opacity: 0.25;
+  }
+
+  .info-project {
+    padding: 40px;
+    align-items: center!important;
+    width: 100%!important;
+    text-align: center;
+
+    p{
+      width: 100%!important;
+      background-color: initial!important;
+      box-shadow: none!important;
+      color: #111!important;
+    }
+
+    .title-project {
+      align-items: initial!important;
+    }
+  }
+}
+
+@media (min-width:769px) and (max-width: 1024px) {
+
+  .container-project {
+    width: 100%!important;
+
+    .info-project {
+      width: 55%!important;
+    }
+
+    .img-project {
+      width: 40%!important;
+    }
+  }
+}
+
+.project {
+  overflow: auto;
+
+  .container-project {
+    @include flex(initial, initial, center);
+
+    margin: 3rem 0;
+    width: 90%;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .info-project {
+        align-items: flex-end;
+
+        .title-project {
+          align-items: flex-end;
+        }
+
+        .skills-project {
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    .info-project {
+      @include flex(column, initial, center);
+      width: 30%;
+      z-index: 1;
+
+      .title-project {
+        margin-bottom: 1rem;
+        @include flex(column);
+
+        h4 {
+          font-family: 'roboto';
+          color: $color-projects;
+        }
+      }
+
+      p {
+        width: 110%;
+        background-color: $color-projects;
+        color: #fff;
+        padding: 1rem;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      .skills-project {
+        display: flex;
+
+        li {
+          font-size: 1rem;
+          margin: 0.5rem;
+        }
+      }
+    }
+
+    .img-project {
+      width: 30%;
+      height: 80%;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+      filter: grayscale(100);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  div {
+    display: flex;
+    gap: 0.5rem;
+
+    .btn-project {
+      @include button($color-projects);
+  
+      &:hover {
+        background-color: $color-projects;
+        color: #fff;
+      }
+    }
+  
+    .btn-repo {
+      @include button(#161B22);
+  
+      &:hover {
+        background-color: #161B22;
+        color: #fff;
+      }
+    }
+  }
+
+}
