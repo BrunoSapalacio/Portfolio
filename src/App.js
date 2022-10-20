@@ -24,7 +24,7 @@ function App() {
   const [viewSection, setViewSection] = useState(<Home></Home>);
 
   useEffect(() => {
-    console.log(viewSection.type.name);
+    console.log(viewSection);
     switch (viewSection.type.name) {
       case "Home":
         setNameSection("INICIO");

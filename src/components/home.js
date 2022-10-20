@@ -17,9 +17,9 @@ const Home = () => {
           <h1>Sapalacio</h1>
           <h3>Desenvolvedor Frontend | HTML | CSS | JavaScript | React | Sass | Bootstrap</h3>
           <ul>
-            <li><i class="devicon-github-original colored"></i></li>
-            <li><i class="devicon-linkedin-plain colored"></i></li>
-            <li><i class="devicon-facebook-plain colored"></i></li>
+            <li><i className="devicon-github-original colored"></i></li>
+            <li><i className="devicon-linkedin-plain colored"></i></li>
+            <li><i className="devicon-facebook-plain colored"></i></li>
           </ul>
         </div>
       </div>
