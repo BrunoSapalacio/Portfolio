@@ -1,12 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useExpandSection } from "../hooks/useExpandSection";
-import { useContext } from 'react'
-import { context } from '../context/ProjectsContext'
+import { projectsData } from '../data/projectsData';
 
 import '../styles/project.scss'
 
 const Projects = ({ returnSection , color }) => {
-  const { projects } = useContext(context);
   const [boolean, setBoolean] = useState(false);
   const expand = useExpandSection(boolean);
   
@@ -19,17 +17,17 @@ const Projects = ({ returnSection , color }) => {
       </div>
       <h5>PROJETOS</h5>
       <h1 style={{'color' : color}}>Meus Projetos</h1>
-        {projects.map((projeto) => 
-        <div className="container-project">
+        {projectsData.map((projeto, index) => 
+        <div key={index} className="container-project">
           <div className="info-project">
             <div className="title-project">
-              <h4 key={projeto.id}>Projeto {projeto.id}</h4>
+              <h4>Projeto {projeto.number}</h4>
               <h2>{projeto.title}</h2>
             </div>
             <p>{projeto.description}</p>
-            <ul className="skills-project">
-            {projeto.skills.map((skills) => 
-              <li key={skills.id}>{skills}</li>
+             <ul className="skills-project">
+            {projeto.skills.map((skills, index) => 
+              <li key={index}>{skills}</li>
               )}
             </ul>
             <div>
@@ -40,7 +38,8 @@ const Projects = ({ returnSection , color }) => {
             </div>
           </div>
           <img className="img-project" src={projeto.img} alt="" />
-        </div>)}
+        </div>
+        )}
     </section>
   )       
 }
