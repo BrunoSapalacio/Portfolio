@@ -1,4 +1,4 @@
-import SectionArea from "./components/sectionArea";
+//import SectionArea from "./components/sectionArea";
 import Home from "./components/home";
 import About from "./components/about";
 import Skills from "./components/skills";
@@ -7,7 +7,7 @@ import Contact from "./components/contact";
 
 import "./styles/nav.scss";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 function App() {
   const color = useMemo(() => {
@@ -19,44 +19,44 @@ function App() {
       contact: "#fea22be6",
     };
   }, []);
-  const [colorBar, setColorBar] = useState("#DFE212");
-  const [nameSection, setNameSection] = useState();
+  // const [colorBar, setColorBar] = useState("#DFE212");
+  // const [nameSection, setNameSection] = useState();
   const [viewSection, setViewSection] = useState(<Home></Home>);
 
-  useEffect(() => {
-    console.log(viewSection);
-    switch (viewSection.type.name) {
-      case "Home":
-        setNameSection("INICIO");
-        setColorBar(color.home);
-        break;
-      case "About":
-        setNameSection("SOBRE");
-        setColorBar(color.about);
-        break;
-      case "Skills":
-        setNameSection("SKILLS");
-        setColorBar(color.skills);
-        break;
-      case "Projects":
-        setNameSection("PROJETOS");
-        setColorBar(color.projects);
-        break;
-      case "Contact":
-        setNameSection("CONTATO");
-        setColorBar(color.contact);
-        break;
-      default:
-        return;
-    }
-  }, [
-    color.about,
-    color.contact,
-    color.home,
-    color.projects,
-    color.skills,
-    viewSection,
-  ]);
+  // useEffect(() => {
+  //   console.log(viewSection.type.name);
+  //   switch (viewSection.type.name) {
+  //     case "Home":
+  //       setNameSection("INICIO");
+  //       setColorBar(color.home);
+  //       break;
+  //     case "About":
+  //       setNameSection("SOBRE");
+  //       setColorBar(color.about);
+  //       break;
+  //     case "Skills":
+  //       setNameSection("SKILLS");
+  //       setColorBar(color.skills);
+  //       break;
+  //     case "Projects":
+  //       setNameSection("PROJETOS");
+  //       setColorBar(color.projects);
+  //       break;
+  //     case "Contact":
+  //       setNameSection("CONTATO");
+  //       setColorBar(color.contact);
+  //       break;
+  //     default:
+  //       return;
+  //   }
+  // }, [
+  //   color.about,
+  //   color.contact,
+  //   color.home,
+  //   color.projects,
+  //   color.skills,
+  //   viewSection,
+  // ]);
 
   const returnSectionInitial = () => {
     setViewSection(<Home></Home>);
@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className="App">
-      <SectionArea name={nameSection} color={colorBar}></SectionArea>
+      {/* <SectionArea name={nameSection} color={colorBar}></SectionArea> */}
       {viewSection}
       <footer>
         <nav>
@@ -177,7 +177,7 @@ function App() {
           </ul>
         </nav>
       </footer>
-    </div>
+  </div>
   );
 }
 
