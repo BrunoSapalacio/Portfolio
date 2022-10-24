@@ -17,9 +17,8 @@ const Home = () => {
           <h1>Sapalacio</h1>
           <h3>Desenvolvedor Frontend | HTML | CSS | JavaScript | React | Sass | Bootstrap</h3>
           <ul>
-            <li><i className="devicon-github-original colored"></i></li>
-            <li><i className="devicon-linkedin-plain colored"></i></li>
-            <li><i className="devicon-facebook-plain colored"></i></li>
+            <li><a href='https://github.com/BrunoSapalacio' target="_blank" rel="noreferrer"><i className="devicon-github-original colored tooltip"><span className="tooltiptext">Clique aqui para ver o meu Github</span></i></a></li>
+            <li><a href='https://www.linkedin.com/in/bruno-sapalacio-mineiro-0b7a25231/' target="_blank" rel="noreferrer"><i className="devicon-linkedin-plain colored tooltip"><span className="tooltiptext">Clique aqui para ver o meu LinkedIn</span></i></a></li>
           </ul>
         </div>
       </div>

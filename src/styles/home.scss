@@ -1,5 +1,25 @@
 @import './mixins.scss';
 
+@media only screen and (max-width: 768px) {
+  .title-box {
+    width: 100%!important;
+    text-align: center;
+    margin: 1rem;
+
+    ul {
+      width: 100%!important;
+    }
+  }
+
+  .msg-box {
+    margin: auto;
+  }
+
+  .img-box {
+    display: none;
+  }
+}
+
 .home {
   @include flex(row, center);
   background-color: #fff;
@@ -34,13 +54,21 @@
     ul {
       display: flex;
       width: 50%;
-      justify-content: space-evenly;
+      justify-content: center;
+      gap: 2rem;
       margin: 1rem 0;
+
+      i {
+        font-size: 2rem;
+        filter: grayscale(1);
+        cursor: pointer;
+
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
     }
 
-    li {
-      font-size: 2rem;
-    }
   }
 
   .img-box {
