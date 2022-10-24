@@ -8,7 +8,8 @@
 
   section {
     width: 100% !important;
-    height: 90vh;
+    max-width: 100%;
+    height: 83vh;
     margin: 0 !important;
   }
 }
@@ -30,6 +31,12 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+html { // Fix para retirar o fundo azul ao clicar nas skills
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  //-webkit-text-size-adjust: 100%;
+  //text-size-adjust: 100%; 
 }
 
 html,
@@ -123,6 +130,7 @@ body {
     align-items: center;
     transition: none;
     overflow: auto;
+    overflow-x: hidden;
 
     >h5 {
       margin-top: 1rem;
