@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useExpandSection } from "../hooks/useExpandSection";
-//import { useForm } from "react-hook-form";
-import { NetlifyForm, Honeypot } from 'react-netlify-forms'
-//import Swal from "sweetalert2";
-//import db from "../firebase/database";
-//import { collection } from "firebase/firestore";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import db from "../firebase/database";
+import { collection, addDoc } from "firebase/firestore";
 
 import "../styles/contact.scss";
 
@@ -14,33 +13,33 @@ import Location from "../icons/location.svg";
 
 const Contact = ({ returnSection, color }) => {
   const [boolean, setBoolean] = useState(false);
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [assunto, setAssunto] = useState("");
-  // const [message, setMessage] = useState("");
-  // const { register } = useForm();
-  //const clientsCollectionRef = collection(db, "Clientes");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [assunto, setAssunto] = useState("");
+  const [message, setMessage] = useState("");
+  const { register, handleSubmit } = useForm();
+  const clientsCollectionRef = collection(db, "Clientes");
   const expand = useExpandSection(boolean);
 
-  // const onSubmit = async (userData) => {
-  //   console.log(userData);
+  const onSubmit = async (userData) => {
+    console.log(userData);
 
-  //   try {
-  //     Swal.fire({
-  //       text: "Formulário enviado com sucesso!",
-  //       icon: "success",
-  //       showConfirmButton: true,
-  //       confirmButtonColor: "#fea22be6",
-  //     }).then(async (result) => {
-  //       if (result.isConfirmed) {
-  //         await addDoc(clientsCollectionRef, userData);
-  //         document.location.reload(true);
-  //       }
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+    try {
+      Swal.fire({
+        text: "Formulário enviado com sucesso!",
+        icon: "success",
+        showConfirmButton: true,
+        confirmButtonColor: "#fea22be6",
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await addDoc(clientsCollectionRef, userData);
+          document.location.reload(true);
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <section
@@ -62,33 +61,35 @@ const Contact = ({ returnSection, color }) => {
         Preencha o formulário abaixo ou clique nas opções adicionais de contato
         para poder entrar em contato comigo.
       </p>
-      <NetlifyForm name='Contact' action='/thanks' honeypotName='bot-field' className="form-contact">
-      {({ handleChange, success, error }) => (
-      <>
-        <Honeypot />
-        {success && <p>Thanks for contacting us!</p>}
-        {error && (
-          <p>Sorry, we could not reach our servers. Please try again later.</p>
-        )}
+      <form onSubmit={handleSubmit(onSubmit)} className="form-contact">
         <input
           className="input-contact"
           type="text"
           placeholder="Nome*"
-          onChange={handleChange}
+          {...register("nome", {
+            required: true,
+            onChange: (e) => setName(e.target.value),
+          })}
           required
         />
         <input
           className="input-contact"
           type="mail"
           placeholder="Email*"
-          onChange={handleChange}
+          {...register("email", {
+            required: true,
+            onChange: (e) => setEmail(e.target.value),
+          })}
           required
         />
         <input
           className="input-contact"
           type="text"
           placeholder="Assunto*"
-          onChange={handleChange}
+          {...register("assunto", {
+            required: true,
+            onChange: (e) => setAssunto(e.target.value),
+          })}
           required
         />
         <textarea
@@ -96,25 +97,27 @@ const Contact = ({ returnSection, color }) => {
           cols="10"
           rows="5"
           placeholder="Mensagem*"
-          onChange={handleChange}
+          {...register("Mensagem", {
+            required: true,
+            onChange: (e) => setMessage(e.target.value),
+          })}
           required
         ></textarea>
         <span>
           Os campos com <strong>*</strong> são obrigatórios.
         </span>
-        <button
+        <input
           className="btn-contact"
           type="submit"
-          // disabled={
-          //   name.length <= 1 ||
-          //   assunto.length <= 1 ||
-          //   email.indexOf("@") === -1 ||
-          //   message.length <= 3
-          // }
-        >ENVIAR</button>
-         </>
-        )}
-        </NetlifyForm>
+          value="ENVIAR"
+          disabled={
+            name.length <= 1 ||
+            assunto.length <= 1 ||
+            email.indexOf("@") === -1 ||
+            message.length <= 3
+          }
+        />
+      </form>
       <div className="additional-contact">
         <div className="tooltip" onClick={() => window.open('mailto:bruno2014mineiro@gmail.com', '_blank').focus()}>
           <span className="tooltiptext">Clique aqui para enviar um email</span>
