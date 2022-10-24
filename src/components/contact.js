@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useExpandSection } from "../hooks/useExpandSection";
 import { useForm } from "react-hook-form";
-import Swal from "sweetalert2";
-import db from "../firebase/database";
-import { collection, addDoc } from "firebase/firestore";
+//import Swal from "sweetalert2";
+//import db from "../firebase/database";
+//import { collection } from "firebase/firestore";
 
 import "../styles/contact.scss";
 
@@ -17,29 +17,29 @@ const Contact = ({ returnSection, color }) => {
   const [email, setEmail] = useState("");
   const [assunto, setAssunto] = useState("");
   const [message, setMessage] = useState("");
-  const { register, handleSubmit } = useForm();
-  const clientsCollectionRef = collection(db, "Clientes");
+  const { register } = useForm();
+  //const clientsCollectionRef = collection(db, "Clientes");
   const expand = useExpandSection(boolean);
 
-  const onSubmit = async (userData) => {
-    console.log(userData);
+  // const onSubmit = async (userData) => {
+  //   console.log(userData);
 
-    try {
-      Swal.fire({
-        text: "Formulário enviado com sucesso!",
-        icon: "success",
-        showConfirmButton: true,
-        confirmButtonColor: "#fea22be6",
-      }).then(async (result) => {
-        if (result.isConfirmed) {
-          await addDoc(clientsCollectionRef, userData);
-          document.location.reload(true);
-        }
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //   try {
+  //     Swal.fire({
+  //       text: "Formulário enviado com sucesso!",
+  //       icon: "success",
+  //       showConfirmButton: true,
+  //       confirmButtonColor: "#fea22be6",
+  //     }).then(async (result) => {
+  //       if (result.isConfirmed) {
+  //         await addDoc(clientsCollectionRef, userData);
+  //         document.location.reload(true);
+  //       }
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <section
