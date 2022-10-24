@@ -61,7 +61,7 @@ const Contact = ({ returnSection, color }) => {
         Preencha o formulário abaixo ou clique nas opções adicionais de contato
         para poder entrar em contato comigo.
       </p>
-      <form onSubmit={handleSubmit(onSubmit)} name="contact" method="POST" data-netlify="true" className="form-contact">
+      <form name="contact" method="POST" netlify className="form-contact">
         <input
           className="input-contact"
           type="text"
