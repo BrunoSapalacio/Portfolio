@@ -106,17 +106,16 @@ const Contact = ({ returnSection, color }) => {
         <span>
           Os campos com <strong>*</strong> são obrigatórios.
         </span>
-        <input
+        <button
           className="btn-contact"
           type="submit"
-          value="ENVIAR"
           disabled={
             name.length <= 1 ||
             assunto.length <= 1 ||
             email.indexOf("@") === -1 ||
             message.length <= 3
           }
-        />
+        >ENVIAR</button>
       </form>
       <div className="additional-contact">
         <div className="tooltip" onClick={() => window.open('mailto:bruno2014mineiro@gmail.com', '_blank').focus()}>
