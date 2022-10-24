@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useExpandSection } from "../hooks/useExpandSection";
-import { useForm } from "react-hook-form";
+//import { useForm } from "react-hook-form";
 import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 //import Swal from "sweetalert2";
 //import db from "../firebase/database";
@@ -14,11 +14,11 @@ import Location from "../icons/location.svg";
 
 const Contact = ({ returnSection, color }) => {
   const [boolean, setBoolean] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [assunto, setAssunto] = useState("");
-  const [message, setMessage] = useState("");
-  const { register } = useForm();
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [assunto, setAssunto] = useState("");
+  // const [message, setMessage] = useState("");
+  // const { register } = useForm();
   //const clientsCollectionRef = collection(db, "Clientes");
   const expand = useExpandSection(boolean);
 

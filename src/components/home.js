@@ -7,7 +7,7 @@ import Code from '../images/code-typing-bro.svg'
 
 const Home = () => {
   return (
-    <section className='home animate__animated animate__slideInDown'>
+    <section className='home animate__animated animate__slideInLeft'>
       <div className='title-box'>
         <div>
           <div className='msg-box'>
