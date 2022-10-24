@@ -18,7 +18,7 @@
     text-align: center;
   }
 
-  .form-contact {
+  form {
     @include flex(column);
     width: 60%;
 
