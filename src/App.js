@@ -61,6 +61,7 @@ function App() {
 
   const returnSectionInitial = () => {
     setViewSection(<Home></Home>);
+    setMenu('Home');
   };
 
   return (
