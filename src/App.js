@@ -22,9 +22,10 @@ function App() {
   // const [colorBar, setColorBar] = useState("#DFE212");
   // const [nameSection, setNameSection] = useState();
   const [viewSection, setViewSection] = useState(<Home></Home>);
+  const [menu, setMenu] = useState('Home');
 
   // useEffect(() => {
-  //   console.log(viewSection.type.name);
+  //   console.log(menu);
   //   switch (viewSection.type.name) {
   //     case "Home":
   //       setNameSection("INICIO");
@@ -71,7 +72,7 @@ function App() {
           <ul>
             <li
               style={
-                viewSection.type.name === "About"
+                menu === "About"
                   ? { backgroundColor: color.about }
                   : { backgroundColor: "#111111" }
               }
@@ -79,20 +80,15 @@ function App() {
               <button
                 className="menu-btn"
                 onClick={() =>
-                  setViewSection(
-                    <About
-                      returnSection={returnSectionInitial}
-                      color={color.about}
-                    ></About>
-                  )
-                }
+                  setViewSection(<About returnSection={returnSectionInitial}color={color.about}></About>) +
+                  setMenu('About')}
               >
                 Sobre
               </button>
             </li>
             <li
               style={
-                viewSection.type.name === "Skills"
+                menu === "Skills"
                   ? { backgroundColor: color.skills }
                   : { backgroundColor: "#111111" }
               }
@@ -100,20 +96,15 @@ function App() {
               <button
                 className="menu-btn"
                 onClick={() =>
-                  setViewSection(
-                    <Skills
-                      returnSection={returnSectionInitial}
-                      color={color.skills}
-                    ></Skills>
-                  )
-                }
+                  setViewSection(<Skills returnSection={returnSectionInitial}color={color.skills}></Skills> ) +
+                  setMenu('Skills')}
               >
                 Skills
               </button>
             </li>
             <li
               style={
-                viewSection.type.name === "Home"
+                menu === "Home"
                   ? { backgroundColor: color.home }
                   : { backgroundColor: "#111111" }
               }
@@ -121,20 +112,15 @@ function App() {
               <button
                 className="menu-btn"
                 onClick={() =>
-                  setViewSection(
-                    <Home
-                      returnSection={returnSectionInitial}
-                      color={color.home}
-                    ></Home>
-                  )
-                }
+                  setViewSection( <Home returnSection={returnSectionInitial} color={color.home}></Home>) +
+                  setMenu('Home')}
               >
                 Inicio
               </button>
             </li>
             <li
               style={
-                viewSection.type.name === "Projects"
+                menu === "Projects"
                   ? { backgroundColor: color.projects }
                   : { backgroundColor: "#111111" }
               }
@@ -147,15 +133,15 @@ function App() {
                       returnSection={returnSectionInitial}
                       color={color.projects}
                     ></Projects>
-                  )
-                }
+                  ) +
+                  setMenu('Projects')}
               >
                 Projetos
               </button>
             </li>
             <li
               style={
-                viewSection.type.name === "Contact"
+                menu === "Contact"
                   ? { backgroundColor: color.contact }
                   : { backgroundColor: "#111111" }
               }
@@ -168,8 +154,8 @@ function App() {
                       returnSection={returnSectionInitial}
                       color={color.contact}
                     ></Contact>
-                  )
-                }
+                  ) +
+                  setMenu('Contact')}
               >
                 Contato
               </button>
