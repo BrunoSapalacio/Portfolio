@@ -1,6 +1,6 @@
 @import './styles/mixins.scss';
 
-@media (min-width: 1px) and (max-width: 768px) {
+@media (min-width: 1px) and (max-width: 999px) {
 
   html {
     font-size: 15px;
@@ -15,7 +15,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
   section {
     height: 80vh;
   }

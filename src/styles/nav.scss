@@ -1,17 +1,16 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-@media screen and (max-width: 468px) {
-  
-}
-
 @media screen and (max-width: 768px) {
-
   .menu-btn {
     font-size: 1rem!important;
   }
+}
 
-
+@media screen and (max-width: 1599px) {
+  .menu-btn {
+    font-size: 1.1rem!important;
+  }
 }
 
 nav {

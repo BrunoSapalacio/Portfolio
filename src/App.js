@@ -4,6 +4,7 @@ import About from "./components/about";
 import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
+import SectionArea from "./components/sectionArea";
 
 import "./styles/nav.scss";
 
@@ -23,6 +24,7 @@ function App() {
   // const [nameSection, setNameSection] = useState();
   const [viewSection, setViewSection] = useState(<Home></Home>);
   const [menu, setMenu] = useState('Home');
+  //const [icon, setIcon] = useState(homeIcon);
 
   // useEffect(() => {
   //   console.log(menu);
@@ -66,7 +68,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <SectionArea name={nameSection} color={colorBar}></SectionArea> */}
+      {menu !== "Home" ? <SectionArea></SectionArea> : null}
       {viewSection}
       <footer>
         <nav>

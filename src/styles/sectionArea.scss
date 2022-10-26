@@ -1,34 +1,76 @@
 @import './mixins.scss';
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 999px) {
   .section-area {
     display: none!important;
   }
 }
 
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .section-icon {
+    li {
+      width: 1.1rem!important;
+      height: 1.1rem!important;
+      background-size: 1.4rem!important;
+    }
+
+  }
+  .section-tooltip {
+    font-size: 0.7rem!important;
+  }
+}
+
 .section-area {
   position: fixed;
-  display: block;
   width: 5%;
   height: 100%;
   @include flex(column, center, center);
   background-color: #111111;
   z-index: 0;
 
-  .section-name {
-    color: #fff;
-    width: 1px;
-    margin-right: 5px;
-    font-size: 1.4em;
-    font-family: monospace;
-    word-wrap: break-word; 
-    font-weight: 100;
-  }
-  
-  .section-bar {
-    position: absolute;
-    height: 40%;
-    width: 1px;
-    bottom: 0;
+  .section-icon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    a {
+      width: 1.5em;
+      height: 1.5em;
+      list-style: none;
+      background-size: 1rem;
+      cursor: pointer;
+      margin: 2rem 0;
+      filter: grayscale(1);
+      filter: brightness(30);
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+      &:hover {
+        filter: grayscale(0);
+        transform: scale(1.2);
+      }
+    }
+
+    .section-tooltip{
+      margin-left: -85px;
+      font-size: 0.8rem;
+
+      &:after {
+        border: none;
+      }
+    }
+
+    .facebook {
+      background: url('../icons/social/facebook.svg') 50% no-repeat;
+    }
+    .instagram {
+      background: url('../icons/social/instagram.svg') 50% no-repeat;
+    }
+    .linkedin {
+      background: url('../icons/social/linkedin.svg') 50% no-repeat;
+    }
+    .github {
+      background: url('../icons/social/github.svg') 50% no-repeat;
+    }
   }
 }
