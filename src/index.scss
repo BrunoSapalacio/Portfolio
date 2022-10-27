@@ -106,6 +106,22 @@ a {
   }
 }
 
+.facebook {
+  background: url('./icons/social/facebook.svg') 50% no-repeat;
+}
+.instagram {
+  background: url('./icons/social/instagram.svg') 50% no-repeat;
+}
+.linkedin {
+  background: url('./icons/social/linkedin.svg') 50% no-repeat;
+}
+.github {
+  background: url('./icons/social/github.svg') 50% no-repeat;
+}
+.github-2 {
+  background: url('./icons/social/github-2.svg') 50% no-repeat;
+}
+
 body {
   font-family: 'Oswald', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -149,6 +165,7 @@ body {
 
     .expand-section {
       @include buttonSection(#111111, './icons/expand.svg', 3rem);
+      cursor: nesw-resize!important;
     }
 
     .close-section {

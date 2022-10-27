@@ -26,3 +26,20 @@
   background-color: none;
   padding: 1rem;
 }
+
+@mixin socialIcons($size) {
+  width: 1.5em;
+  height: 1.5em;
+  list-style: none;
+  background-size: $size;
+  cursor: pointer;
+  margin: 2rem 0;
+  filter: grayscale(1);
+  filter: brightness(30);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+  &:hover {
+    filter: grayscale(0);
+    transform: scale(1.2);
+  }
+}

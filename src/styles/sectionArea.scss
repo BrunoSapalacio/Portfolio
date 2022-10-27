@@ -23,7 +23,7 @@
 .section-area {
   position: fixed;
   width: 5%;
-  height: 100%;
+  height: 80vh;
   @include flex(column, center, center);
   background-color: #111111;
   z-index: 0;
@@ -35,20 +35,7 @@
     align-items: center;
 
     a {
-      width: 1.5em;
-      height: 1.5em;
-      list-style: none;
-      background-size: 1rem;
-      cursor: pointer;
-      margin: 2rem 0;
-      filter: grayscale(1);
-      filter: brightness(30);
-      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-
-      &:hover {
-        filter: grayscale(0);
-        transform: scale(1.2);
-      }
+      @include socialIcons(1.5rem);
     }
 
     .section-tooltip{
@@ -58,19 +45,6 @@
       &:after {
         border: none;
       }
-    }
-
-    .facebook {
-      background: url('../icons/social/facebook.svg') 50% no-repeat;
-    }
-    .instagram {
-      background: url('../icons/social/instagram.svg') 50% no-repeat;
-    }
-    .linkedin {
-      background: url('../icons/social/linkedin.svg') 50% no-repeat;
-    }
-    .github {
-      background: url('../icons/social/github.svg') 50% no-repeat;
     }
   }
 }
