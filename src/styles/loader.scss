@@ -1,0 +1,35 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+
+  .circle-spinning {
+    animation: spinning 1.3s cubic-bezier(0, .25, .7125, .1) infinite;
+    width: 10rem;
+    height: 10rem;
+    border: 8px solid #fff;
+    border-top-color: #cf2125;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    position: absolute;
+  }
+
+  @keyframes spinning {
+    to {
+      transform: rotate(1turn);
+    } from {
+
+    }
+  }
+}

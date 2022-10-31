@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import db from "../firebase/database";
 import { collection, addDoc } from "firebase/firestore";
 
+// Css
 import "../styles/contact.scss";
 
 import Email from "../icons/email.svg";
@@ -119,19 +120,43 @@ const Contact = ({ returnSection, color }) => {
         />
       </form>
       <div className="additional-contact">
-        <div className="tooltip" onClick={() => window.open('mailto:bruno2014mineiro@gmail.com', '_blank').focus()}>
+        <div
+          className="tooltip"
+          onClick={() =>
+            window.open("mailto:bruno2014mineiro@gmail.com", "_blank").focus()
+          }
+        >
           <span className="tooltiptext">Clique aqui para enviar um email</span>
           <img src={Email} alt="" />
           <h4>Envie um email</h4>
           <p>bruno2014mineiro@gmail.com</p>
         </div>
-        <div className="tooltip" onClick={() => window.open('https://wa.me/5515991573088?text=Ol%C3%A1,%20gostaria%20de%20entrar%20em%20contato!', '_blank').focus()}>
-          <span className="tooltiptext">Clique aqui para enviar uma mensagem via Whatsapp</span>
+        <div
+          className="tooltip"
+          onClick={() =>
+            window
+              .open(
+                "https://wa.me/5515991573088?text=Ol%C3%A1,%20gostaria%20de%20entrar%20em%20contato!",
+                "_blank"
+              )
+              .focus()
+          }
+        >
+          <span className="tooltiptext">
+            Clique aqui para enviar uma mensagem via Whatsapp
+          </span>
           <img src={WhatsApp} alt="" />
           <h4>Mensagem ou ligação via WhatsApp</h4>
           <p>+55 (15) 991573088</p>
         </div>
-        <div className="tooltip" onClick={() => window.open('https://goo.gl/maps/QyimYSGs1XhfBBn87', '_blank').focus()}>
+        <div
+          className="tooltip"
+          onClick={() =>
+            window
+              .open("https://goo.gl/maps/QyimYSGs1XhfBBn87", "_blank")
+              .focus()
+          }
+        >
           <span className="tooltiptext">Ver Localização</span>
           <img src={Location} alt="" />
           <h4>Localização</h4>

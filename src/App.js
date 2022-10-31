@@ -5,10 +5,11 @@ import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import SectionArea from "./components/sectionArea";
+import Loader from "./components/loader";
 
 import "./styles/nav.scss";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 function App() {
   const color = useMemo(() => {
@@ -20,58 +21,31 @@ function App() {
       contact: "#fea22be6",
     };
   }, []);
-  // const [colorBar, setColorBar] = useState("#DFE212");
-  // const [nameSection, setNameSection] = useState();
-  const [viewSection, setViewSection] = useState(<Home></Home>);
-  const [menu, setMenu] = useState('Home');
-  //const [icon, setIcon] = useState(homeIcon);
-
-  // useEffect(() => {
-  //   console.log(menu);
-  //   switch (viewSection.type.name) {
-  //     case "Home":
-  //       setNameSection("INICIO");
-  //       setColorBar(color.home);
-  //       break;
-  //     case "About":
-  //       setNameSection("SOBRE");
-  //       setColorBar(color.about);
-  //       break;
-  //     case "Skills":
-  //       setNameSection("SKILLS");
-  //       setColorBar(color.skills);
-  //       break;
-  //     case "Projects":
-  //       setNameSection("PROJETOS");
-  //       setColorBar(color.projects);
-  //       break;
-  //     case "Contact":
-  //       setNameSection("CONTATO");
-  //       setColorBar(color.contact);
-  //       break;
-  //     default:
-  //       return;
-  //   }
-  // }, [
-  //   color.about,
-  //   color.contact,
-  //   color.home,
-  //   color.projects,
-  //   color.skills,
-  //   viewSection,
-  // ]);
+  const [viewSection, setViewSection] = useState();
+  const [menu, setMenu] = useState();
 
   const returnSectionInitial = () => {
     setViewSection(<Home></Home>);
     setMenu('Home');
   };
 
+  useEffect(() => {
+    console.log(menu)
+    if(menu === undefined) {
+      setTimeout(() => {
+        setViewSection(<Home></Home>);
+        setMenu('Home');
+      }, 3700);
+    }
+  },[menu])
+
   return (
     <div className="App">
-      {menu !== "Home" ? <SectionArea></SectionArea> : null}
+      {menu === undefined ? <Loader></Loader> : null}
+      {menu !== "Home" && menu !== undefined ? <SectionArea></SectionArea> : null}
       {viewSection}
       <footer>
-        <nav>
+        <nav className={menu === undefined ? null : "animate__animated animate__zoomIn animate__delay-1s"}>
           <ul>
             <li
               style={

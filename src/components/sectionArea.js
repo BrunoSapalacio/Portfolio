@@ -1,5 +1,4 @@
-import React from 'react'
-
+// Css
 import '../styles/sectionArea.scss'
 
 const sectionArea = () => {

@@ -2,28 +2,28 @@
 @import './mixins.scss';
 
 @media only screen and (max-width: 768px) {
-  .img-project{
-    width: 90%!important;
-    height: 23rem!important;
+  .img-project {
+    width: 90% !important;
+    height: 23rem !important;
     position: absolute;
     opacity: 0.25;
   }
 
   .info-project {
     padding: 40px;
-    align-items: center!important;
-    width: 100%!important;
+    align-items: center !important;
+    width: 100% !important;
     text-align: center;
 
-    p{
-      width: 100%!important;
-      background-color: initial!important;
-      box-shadow: none!important;
-      color: #111!important;
+    p {
+      width: 100% !important;
+      background-color: initial !important;
+      box-shadow: none !important;
+      color: #111 !important;
     }
 
     .title-project {
-      align-items: initial!important;
+      align-items: initial !important;
     }
   }
 }
@@ -31,14 +31,14 @@
 @media (min-width:769px) and (max-width: 1024px) {
 
   .container-project {
-    width: 100%!important;
+    width: 100% !important;
 
     .info-project {
-      width: 55%!important;
+      width: 55% !important;
     }
 
     .img-project {
-      width: 40%!important;
+      width: 40% !important;
     }
   }
 }
@@ -122,16 +122,16 @@
 
     .btn-project {
       @include button($color-projects);
-  
+
       &:hover {
         background-color: $color-projects;
         color: #fff;
       }
     }
-  
+
     .btn-repo {
       @include button(#161B22);
-  
+
       &:hover {
         background-color: #161B22;
         color: #fff;

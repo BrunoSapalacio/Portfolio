@@ -2,12 +2,12 @@
 
 @media only screen and (max-width: 768px) {
   .title-box {
-    width: 100%!important;
+    width: 100% !important;
     text-align: center;
     margin: 1rem;
 
     ul {
-      width: 100%!important;
+      width: 100% !important;
     }
   }
 
@@ -31,7 +31,7 @@
 
     .msg-box {
       background-color: #111;
-      box-shadow: 4px -4px 0px 1px rgba(77,77,77,1);
+      box-shadow: 4px -4px 0px 1px rgba(77, 77, 77, 1);
       font-family: monospace;
       font-size: 1rem;
       font-weight: 100;
@@ -44,14 +44,15 @@
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 600;
       font-size: 5rem;
-      
+
     }
 
+    // ======================= Animação da logo ========================
     .stack {
       display: grid;
       grid-template-columns: 1fr;
     }
-    
+
     .stack h1 {
       font-weight: bold;
       grid-row-start: 1;
@@ -62,43 +63,58 @@
       --clip-top: calc(var(--stack-height) * var(--index));
       --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
       clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-      animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 1s alternate-reverse;
+      animation: stack 340ms cubic-bezier(.46, .29, 0, 1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 1s alternate-reverse;
     }
-    
-    .stack h1:nth-child(odd) { --glitch-translate: 8px; }
-    .stack h1:nth-child(even) { --glitch-translate: -8px; }
-    
+
+    .stack h1:nth-child(odd) {
+      --glitch-translate: 8px;
+    }
+
+    .stack h1:nth-child(even) {
+      --glitch-translate: -8px;
+    }
+
     @keyframes stack {
       0% {
         opacity: 0;
         transform: translateX(-50%);
         text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
-      };
+      }
+
       60% {
         opacity: 0.5;
         transform: translateX(50%);
       }
+
       80% {
         transform: none;
         opacity: 1;
         text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
       }
+
       100% {
         text-shadow: none;
       }
     }
-    
+
     @keyframes glitch {
       0% {
         text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
         transform: translate(var(--glitch-translate));
       }
+
       2% {
         text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
       }
-      4%, 100% {  text-shadow: none; transform: none; }
+
+      4%,
+      100% {
+        text-shadow: none;
+        transform: none;
+      }
     }
-    
+
+    // ===========================================================
 
     h3 {
       color: #CF2125;
@@ -122,7 +138,6 @@
         }
       }
     }
-
   }
 
   .img-box {

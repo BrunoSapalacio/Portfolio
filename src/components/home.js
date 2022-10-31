@@ -1,14 +1,14 @@
-import React from 'react'
-
+//Css
 import 'animate.css'
 import '../styles/home.scss'
 import '../styles/background.scss'
 
+//Imagens
 import Code from '../images/code-typing-bro.svg'
 
 const Home = () => {
   return (
-    <section className='home animate__animated animate__slideInLeft'>
+    <section className='home animate__animated animate__zoomIn'>
       <div className='lines'>
         <div className="line"></div>
         <div className="line"></div>

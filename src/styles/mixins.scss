@@ -9,7 +9,7 @@
   transition: 0.1s ease-in-out;
 }
 
-@mixin flex($direction, $align:initial, $justify: initial){
+@mixin flex($direction, $align:initial, $justify: initial) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;

@@ -21,7 +21,7 @@
   }
 }
 
-@font-face {
+@font-face { // Fonte
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
@@ -38,8 +38,7 @@ html { // Fix para retirar o fundo azul ao clicar nas skills
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-html,
-body {
+html, body {
   overflow: hidden;
 }
 
@@ -57,6 +56,7 @@ a {
   cursor: pointer;
 }
 
+// Scroll do navegador
 ::-webkit-scrollbar {
   background-color: #fff;
   width: 12px;
@@ -76,6 +76,7 @@ a {
       visibility: visible;
     }
   }
+
   .tooltiptext {
     visibility: hidden;
     width: 150px;
@@ -109,15 +110,19 @@ a {
 .facebook {
   background: url('./icons/social/facebook.svg') 50% no-repeat;
 }
+
 .instagram {
   background: url('./icons/social/instagram.svg') 50% no-repeat;
 }
+
 .linkedin {
   background: url('./icons/social/linkedin.svg') 50% no-repeat;
 }
+
 .github {
   background: url('./icons/social/github.svg') 50% no-repeat;
 }
+
 .github-2 {
   background: url('./icons/social/github-2.svg') 50% no-repeat;
 }
@@ -136,7 +141,6 @@ body {
 
   section {
     width: 90%;
-    //height: 80vh;
     display: flex;
     flex-direction: column;
     margin: 10vh auto 0;
@@ -165,7 +169,7 @@ body {
 
     .expand-section {
       @include buttonSection(#111111, './icons/expand.svg', 3rem);
-      cursor: nesw-resize!important;
+      cursor: nesw-resize !important;
     }
 
     .close-section {
