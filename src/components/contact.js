@@ -8,6 +8,7 @@ import { collection, addDoc } from "firebase/firestore";
 // Css
 import "../styles/contact.scss";
 
+// Icones
 import Email from "../icons/email.svg";
 import WhatsApp from "../icons/whatsapp.svg";
 import Location from "../icons/location.svg";
@@ -23,8 +24,6 @@ const Contact = ({ returnSection, color }) => {
   const expand = useExpandSection(boolean);
 
   const onSubmit = async (userData) => {
-    console.log(userData);
-
     try {
       Swal.fire({
         text: "Formulário enviado com sucesso!",
@@ -34,7 +33,7 @@ const Contact = ({ returnSection, color }) => {
       }).then(async (result) => {
         if (result.isConfirmed) {
           await addDoc(clientsCollectionRef, userData);
-          document.location.reload(true);
+          returnSection();
         }
       });
     } catch (error) {

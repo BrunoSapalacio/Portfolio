@@ -3,7 +3,7 @@ import 'animate.css'
 import '../styles/home.scss'
 import '../styles/background.scss'
 
-//Imagens
+//Imagem
 import Code from '../images/code-typing-bro.svg'
 
 const Home = () => {
@@ -37,6 +37,7 @@ const Home = () => {
           <a className="linkedin tooltip" href='https://www.linkedin.com/in/bruno-sapalacio-mineiro-0b7a25231/' target="_blank" rel="noreferrer"><span className="tooltiptext">LinkedIn</span></a>
           <a className="instagram tooltip" href='https://www.instagram.com/bruno.sapalacio/?hl=pt-br' target="_blank" rel="noreferrer"><span className="tooltiptext">Instagram</span></a>
           <a className="facebook tooltip" href='https://www.facebook.com/bruno.sapalacio' target="_blank" rel="noreferrer"><span className="tooltiptext">Facebook</span></a>
+          <a className="whatsapp tooltip" href="https://wa.me/5515991573088?text=Ol%C3%A1,%20gostaria%20de%20entrar%20em%20contato!" target="_blank" rel="noreferrer"><span className="tooltiptext">Whatsapp</span></a>
           </ul>
         </div>
       </div>

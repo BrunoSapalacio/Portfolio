@@ -30,7 +30,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(menu)
     if(menu === undefined) {
       setTimeout(() => {
         setViewSection(<Home></Home>);

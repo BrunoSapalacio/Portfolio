@@ -1,6 +1,12 @@
 @import './variables.scss';
 @import './mixins.scss';
 
+@media screen and (max-width: 460px) {
+  .menu-btn {
+    padding: 0 3vh!important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .menu-btn {
     font-size: 1rem!important;

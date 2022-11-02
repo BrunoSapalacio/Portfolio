@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .loading {
   width: 100vw;
   height: 100vh;
@@ -10,11 +12,11 @@
   font-size: 40px;
 
   .circle-spinning {
-    animation: spinning 1.3s cubic-bezier(0, .25, .7125, .1) infinite;
+    animation: spinning 3s cubic-bezier(0, .25, .7125, .1) infinite;
     width: 10rem;
     height: 10rem;
     border: 8px solid #fff;
-    border-top-color: #cf2125;
+    border-top-color: $color-home;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -27,9 +29,7 @@
 
   @keyframes spinning {
     to {
-      transform: rotate(1turn);
-    } from {
-
+      transform: rotate(7turn);
     }
   }
 }

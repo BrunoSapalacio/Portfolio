@@ -38,7 +38,7 @@ const Projects = ({ returnSection , color }) => {
               <span className="tooltiptext">Clique aqui para ver o repositório</span></a>
             </div>
           </div>
-          <img className="img-project" src={projeto.img} alt="" />
+            <img className="img-project" src={projeto.img} alt="" />
         </div>
         )}
     </section>
