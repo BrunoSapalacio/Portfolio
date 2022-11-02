@@ -31,7 +31,7 @@ const Home = () => {
             <h1 style={{'--index': "1"}}>SAPALACIO</h1>
             <h1 style={{'--index': "2"}}>SAPALACIO</h1>
           </div>
-          <h3>Desenvolvedor Frontend | HTML | CSS | JavaScript | React | Sass | Bootstrap</h3>
+          <h3>Desenvolvedor Front-end | HTML | CSS | JavaScript | React | Sass | Bootstrap</h3>
           <ul>
           <a className="github-2 tooltip" href='https://github.com/BrunoSapalacio' target="_blank" rel="noreferrer"><span className="tooltiptext">GitHub</span></a>
           <a className="linkedin tooltip" href='https://www.linkedin.com/in/bruno-sapalacio-mineiro-0b7a25231/' target="_blank" rel="noreferrer"><span className="tooltiptext">LinkedIn</span></a>
