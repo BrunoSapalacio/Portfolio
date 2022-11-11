@@ -1,5 +1,42 @@
 @import './mixins.scss';
 
+@media screen and (max-width: 600px) {
+  .soft-skills {
+    width: 90%;
+
+    li {
+      width: 90% !important;
+    }
+  }
+}
+
+.soft-skills,
+.hard-skills {
+  margin: 2rem 0;
+
+  h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+
+    li {
+      font-size: 1.1rem;
+      padding: 1rem;
+      width: 29rem;
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+  }
+}
+
 .icons-skills {
   font-size: 5rem;
   display: flex;

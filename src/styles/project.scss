@@ -139,4 +139,14 @@
     }
   }
 
+  .btn-projects {
+    @include button($color-projects);
+    margin: 2rem;
+
+    &:hover {
+      background-color: $color-projects;
+      color: #fff;
+    }
+  }
+
 }

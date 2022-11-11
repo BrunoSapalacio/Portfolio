@@ -44,7 +44,7 @@ function App() {
       {menu !== "Home" && menu !== undefined ? <SectionArea></SectionArea> : null}
       {viewSection}
       <footer>
-        <nav className={menu === undefined ? null : "animate__animated animate__zoomIn animate__delay-1s"}>
+        <nav className={menu === undefined ? null : "animate__animated animate__zoomIn"}>
           <ul>
             <li
               style={

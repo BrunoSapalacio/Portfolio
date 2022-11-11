@@ -43,7 +43,7 @@ const Skills = ({ returnSection, color }) => {
 
   return (
     <section
-      className="about animate__animated animate__slideInLeft"
+      className="skills animate__animated animate__slideInLeft"
       style={expand}
     >
       <div>
@@ -57,6 +57,18 @@ const Skills = ({ returnSection, color }) => {
       </div>
       <h5>SKILLS</h5>
       <h1 style={{'color' : color}}>Minhas Skills</h1>
+      <div className="soft-skills">
+      <h2>Soft Skills</h2>
+        <ol>
+          <li>Comunicativo</li>
+          <li>Flexível</li>
+          <li>Resiliente</li>
+          <li>Trabalhar em equipe</li>
+          <li>Proativo</li>
+        </ol>
+      </div>
+      <div className="hard-skills">
+      <h2>Hard Skills</h2>
       <div className="icons-skills">
         <i
           className="devicon-html5-plain colored tooltip"
@@ -97,7 +109,7 @@ const Skills = ({ returnSection, color }) => {
           <p>{descriptionSkills.description[skills]}</p>
         </div>
       </div>
-      <div></div>
+      </div>
     </section>
   );
 };
