@@ -3,7 +3,7 @@ import { useExpandSection } from "../hooks/useExpandSection";
 import { coursesData } from "../data/coursesData";
 
 // Css
-import "../styles/about.scss";
+import "../styles/_about.scss";
 
 // Imagens
 import Bruno from "../images/bruno.jpg";

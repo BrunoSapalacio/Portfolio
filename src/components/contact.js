@@ -6,7 +6,7 @@ import db from "../firebase/database";
 import { collection, addDoc } from "firebase/firestore";
 
 // Css
-import "../styles/contact.scss";
+import "../styles/_contact.scss";
 
 // Icones
 import Email from "../icons/email.svg";

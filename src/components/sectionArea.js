@@ -1,5 +1,5 @@
 // Css
-import '../styles/sectionArea.scss'
+import '../styles/_sectionArea.scss'
 
 const sectionArea = () => {
   return (

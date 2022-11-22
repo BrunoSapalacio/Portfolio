@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useExpandSection } from "../hooks/useExpandSection";
 
 // Css
-import "../styles/skills.scss";
+import "../styles/_skills.scss";
 
 const Skills = ({ returnSection, color }) => {
   const descriptionSkills = {

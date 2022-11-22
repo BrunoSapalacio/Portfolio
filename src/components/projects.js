@@ -3,7 +3,7 @@ import { useExpandSection } from "../hooks/useExpandSection";
 import { projectsData } from "../data/projectsData";
 
 // Css
-import "../styles/project.scss";
+import "../styles/_project.scss";
 
 const Projects = ({ returnSection, color }) => {
   const [boolean, setBoolean] = useState(false);

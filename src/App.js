@@ -7,7 +7,7 @@ import Contact from "./components/contact";
 import SectionArea from "./components/sectionArea";
 import Loader from "./components/loader";
 
-import "./styles/nav.scss";
+import "./styles/_nav.scss";
 
 import { useEffect, useMemo, useState } from "react";
 

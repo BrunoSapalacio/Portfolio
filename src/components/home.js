@@ -1,7 +1,7 @@
 //Css
 import 'animate.css'
-import '../styles/home.scss'
-import '../styles/background.scss'
+import '../styles/_home.scss'
+import '../styles/_background.scss'
 
 //Imagem
 import Code from '../images/code-typing-bro.svg'
