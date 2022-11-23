@@ -1,14 +1,10 @@
+@import './variables.scss';
 @import './mixins.scss';
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 999px) {
   .title-box {
     width: 100% !important;
     text-align: center;
-    margin: 1rem;
-
-    ul {
-      width: 100% !important;
-    }
   }
 
   .msg-box {
@@ -28,6 +24,7 @@
     width: 50%;
     @include flex(initial, initial, center);
     z-index: 10;
+    margin: 1rem;
 
     .msg-box {
       background-color: #111;
@@ -117,13 +114,13 @@
     // ===========================================================
 
     h3 {
-      color: #CF2125;
+      color: $color-home;
       font-weight: 100;
     }
 
     ul {
       display: flex;
-      width: 50%;
+      width: 100%;
       justify-content: center;
       gap: 2rem;
       margin: 1rem 0;
@@ -135,6 +132,20 @@
 
         &:hover {
           filter: grayscale(0);
+        }
+      }
+    }
+    .curriculum {
+      @include flex(row, center);
+
+      .btn-curriculum {
+        @include button($color-home);
+        background-color: #fff;
+        margin: 0 auto;
+  
+        &:hover {
+          background-color: $color-home;
+          color: #fff;
         }
       }
     }
