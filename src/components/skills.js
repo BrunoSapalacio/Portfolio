@@ -105,7 +105,7 @@ const Skills = ({ returnSection, color }) => {
       </div>
       <div className="description-skills">
         <div style={{ backgroundColor: colorDescription }}>
-          <h2>{descriptionSkills.name[skills]}</h2>
+          <h2>{descriptionSkills.name[skills]} (Intermediário)</h2>
           <p>{descriptionSkills.description[skills]}</p>
         </div>
       </div>
