@@ -44,7 +44,7 @@ npm start
 
 # Prints
 ## Versão Desktop
-![home_desktop](https://user-images.githubusercontent.com/64747697/199564076-1d31c202-f2e4-48b7-80dc-2f21852fb993.png)
+![home_desktop](https://user-images.githubusercontent.com/64747697/203447224-783f3a99-603b-48ac-b82c-280de2a09459.png)
 ![contato_desktop](https://user-images.githubusercontent.com/64747697/199564074-4c056e74-34f7-4658-884e-6433246e3e48.png)
 ![projetos_desktop](https://user-images.githubusercontent.com/64747697/199564080-ad096cd1-9879-4665-bc87-a7b1ba304ba7.png)
 ![skills_desktop](https://user-images.githubusercontent.com/64747697/201246877-35b2b0f3-04b9-4b1c-bf26-497edbdf40e9.png)
@@ -53,7 +53,7 @@ npm start
 ## Versão Mobile
 <div align="center">
 
-![home_mobile](https://user-images.githubusercontent.com/64747697/199564264-9f90e8b7-ab87-4131-ac7e-4d80f8ccc3aa.png)
+![home_mobile](https://user-images.githubusercontent.com/64747697/203447246-09526b6f-9335-4273-bf39-1f20e554d9ed.png)
 ![contato_mobile](https://user-images.githubusercontent.com/64747697/199564258-3cd9e6f9-2157-4045-bd50-141d81b2a0cc.png)
 ![projetos_mobile](https://user-images.githubusercontent.com/64747697/199564265-eaec32dc-b90f-4e4b-80a9-f9b12c91d482.png)
 ![skills_mobile](https://user-images.githubusercontent.com/64747697/201246904-9504c9e7-41a4-4f73-afce-865d174167cd.png)
