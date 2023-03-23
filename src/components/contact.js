@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { useExpandSection } from "../hooks/useExpandSection";
-import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import db from "../firebase/database";
-import { collection, addDoc } from "firebase/firestore";
+import emailjs from '@emailjs/browser';
 
 // Css
 import "../styles/_contact.scss";
@@ -17,28 +15,34 @@ const Contact = ({ returnSection, color }) => {
   const [boolean, setBoolean] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [assunto, setAssunto] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const { register, handleSubmit } = useForm();
-  const clientsCollectionRef = collection(db, "Clientes");
   const expand = useExpandSection(boolean);
 
-  const onSubmit = async (userData) => {
-    try {
-      Swal.fire({
-        text: "Formulário enviado com sucesso!",
-        icon: "success",
-        showConfirmButton: true,
-        confirmButtonColor: "#fea22be6",
-      }).then(async (result) => {
-        if (result.isConfirmed) {
-          await addDoc(clientsCollectionRef, userData);
-          returnSection();
-        }
-      });
-    } catch (error) {
-      console.log(error);
-    }
+  const Send = (e) => {
+    e.preventDefault();
+      const templateParams = {
+        from_name: name,
+        message: message,
+        subject: subject,
+        email: email,
+      }
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_PUBLIC_KEY')
+      .then((response) => {
+        Swal.fire({
+          title: "Agradecemos pelo contato! 😄",
+          html: "Formulário enviado com sucesso.<br/> Em breve iremos entrar em contato.",
+          icon: "success",
+          showConfirmButton: true,
+          confirmButtonColor: "#fea22be6",
+        });
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+      }, (error) => {
+        console.log(error.text);
+      })
   };
 
   return (
@@ -61,46 +65,38 @@ const Contact = ({ returnSection, color }) => {
         Preencha o formulário abaixo ou clique nas opções adicionais de contato
         para poder entrar em contato comigo.
       </p>
-      <form onSubmit={handleSubmit(onSubmit)} className="form-contact">
+      <form onSubmit={Send} className="form-contact">
         <input
           className="input-contact"
+          value={name || ''}
           type="text"
           placeholder="Nome*"
-          {...register("nome", {
-            required: true,
-            onChange: (e) => setName(e.target.value),
-          })}
+          onChange={(e) => setName(e.target.value)}
           required
         />
         <input
           className="input-contact"
+          value={email || ''}
           type="mail"
           placeholder="Email*"
-          {...register("email", {
-            required: true,
-            onChange: (e) => setEmail(e.target.value),
-          })}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           className="input-contact"
+          value={subject || ''}
           type="text"
           placeholder="Assunto*"
-          {...register("assunto", {
-            required: true,
-            onChange: (e) => setAssunto(e.target.value),
-          })}
+          onChange={(e) => setSubject(e.target.value)}
           required
         />
         <textarea
           className="input-contact"
+          value={message || ''}
           cols="10"
           rows="5"
           placeholder="Mensagem*"
-          {...register("Mensagem", {
-            required: true,
-            onChange: (e) => setMessage(e.target.value),
-          })}
+          onChange={(e) => setMessage(e.target.value)}
           required
         ></textarea>
         <span>
@@ -112,7 +108,7 @@ const Contact = ({ returnSection, color }) => {
           value="ENVIAR"
           disabled={
             name.length <= 1 ||
-            assunto.length <= 1 ||
+            subject.length <= 1 ||
             email.indexOf("@") === -1 ||
             message.length <= 3
           }

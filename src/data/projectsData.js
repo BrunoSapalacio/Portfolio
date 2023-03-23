@@ -11,7 +11,7 @@ export const projectsData = [
       title: "Bruno Sapalacio Portfólio",
       description:
         "Portfólio pessoal criado no intuito das pessoas conhecerem melhor os meus projetos e um pouco da minha trajetória até os dias atuais. Através desse projeto, pude colocar em prática novos conhecimentos obtidos através dos estudos.",
-      skills: ["React", "Firebase", "Sass"],
+      skills: ["React", "Sass", "EmailJS"],
       img: portfolio,
       link: "https://www.brunosapalacio.com/",
       repo: "https://github.com/BrunoSapalacio/Portfolio"
