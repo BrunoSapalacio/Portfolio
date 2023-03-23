@@ -1,4 +1,4 @@
-# Bruno Sapalacio Portfólio - ReactJS, Sass e EmailJS [![Netlify Status](https://api.netlify.com/api/v1/badges/da4ebae3-d5ac-405e-9865-2e2359ad6368/deploy-status)](https://app.netlify.com/sites/brunosapalacio/deploys)
+# Bruno Sapalacio Portfólio - ReactJS, Sass e EmailJS
 
 
 
