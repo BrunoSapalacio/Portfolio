@@ -1,4 +1,4 @@
-# Bruno Sapalacio Portfólio - ReactJS, Sass e Firebase [![Netlify Status](https://api.netlify.com/api/v1/badges/da4ebae3-d5ac-405e-9865-2e2359ad6368/deploy-status)](https://app.netlify.com/sites/brunosapalacio/deploys)
+# Bruno Sapalacio Portfólio - ReactJS, Sass e EmailJS [![Netlify Status](https://api.netlify.com/api/v1/badges/da4ebae3-d5ac-405e-9865-2e2359ad6368/deploy-status)](https://app.netlify.com/sites/brunosapalacio/deploys)
 
 
 
@@ -7,7 +7,7 @@ https://user-images.githubusercontent.com/64747697/202312746-0a3d71c4-e46c-4821-
 
 
 
-Apresento a vocês o meu primeiro portfólio pessoal desenvolvido em ReactJS, Sass e Firebase! A ideia do projeto é ser um site fora do padrão em que estamos acostumados, para poder passar uma nova experiência aos usuários. Além de aumentar o meu portfólio de projetos, pude colocar em prática novos conhecimentos obtidos através dos estudos.
+Apresento a vocês o meu primeiro portfólio pessoal desenvolvido em ReactJS, Sass e EmailJS! A ideia do projeto é ser um site fora do padrão em que estamos acostumados, para poder passar uma nova experiência aos usuários. Além de aumentar o meu portfólio de projetos, pude colocar em prática novos conhecimentos obtidos através dos estudos.
 
 Este projeto foi criado com [Create React App](https://github.com/facebook/create-react-app).
 # O projeto possui: 
@@ -19,7 +19,7 @@ Este projeto foi criado com [Create React App](https://github.com/facebook/creat
 # Tecnologias utilizadas
 - [ReactJS](https://pt-br.reactjs.org/) – Framework JavaScript;
 - [Sass](https://sass-lang.com/) – Pré Processador CSS;
-- [Firebase](https://firebase.google.com/) - BaaS (Backend As A Service) é um modelo de serviço que provê a infraestrutura e o backend de uma aplicação de forma simplificada sem necessidade do desenvolvimento manual dessa solução; 
+- [EmailJS](https://www.emailjs.com/) - Pega os dados de um formulário e transfere para o email; 
 - [Cloud Firestore](https://firebase.google.com/products/firestore?hl=pt-br&gclid=Cj0KCQjw3eeXBhD7ARIsAHjssr9wNpPcR5qdcIwL2ZCGVcwOrwgyBNKueys3jXiXMGkFc_8IcLi-sU8aAr7IEALw_wcB&gclsrc=aw.ds) - Banco de dados NoSQL;
 - [Animate.css](https://animate.style/) - Cria animações pré-definidas em CSS;
 - [React Hook Form](https://react-hook-form.com/) - Gerencia e valida formulários; 
